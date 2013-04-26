@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %banner -o -e %{name} <<-'EOF'
 
 To use this Vagrant plugin, you need to link .gemspec to vagrant specifications dir:
+$ install -d ~/.vagrant.d/gems/specifications
 $ ln -s %{spec_dir}/vagrant-kvm-%{version}.gemspec ~/.vagrant.d/gems/specifications
 
 and it should became available:
