@@ -53,7 +53,10 @@ To use this Vagrant plugin, you need to link .gemspec to vagrant specifications 
 $ install -d ~/.vagrant.d/gems/specifications
 $ ln -s %{spec_dir}/vagrant-kvm-%{version}.gemspec ~/.vagrant.d/gems/specifications
 
-and it should became available:
+and add to plugins.json:
+echo '{"installed":["vagrant-kvm"]}' >> ~/.vagrant.d/plugins.json
+
+it should became available:
 $ vagrant plugin list
 
 EOF
